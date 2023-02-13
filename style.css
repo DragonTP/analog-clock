@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: salmon;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.clock {
+    background-color: lightgray;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid darkgray;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+    position: relative;
+}
+img {
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.numbers div {
+    position: absolute;
+    font-size: 27px;
+    font-weight: 700;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+.num-12 {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.num-3 {
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+}
+.num-6 {
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.num-9 {
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+.num-1 {
+    top: 24px;
+    left: 73%;
+    transform: translateX(-50%);
+}
+.num-2 {
+    top: 27%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+.num-4 {
+    top: 73%;
+    right: 27px;
+    transform: translateY(-50%);
+}
+.num-5 {
+    bottom: 21px;
+    left: 73%;
+    transform: translateX(-50%);
+}
+.num-7 {
+    bottom: 21px;
+    left: 27%;
+    transform: translateX(-50%);
+}
+.num-8 {
+    top: 73%;
+    left: 27px;
+    transform: translateY(-50%);
+}
+.num-10 {
+    top: 27%;
+    left: 27px;
+    transform: translateY(-50%);
+}
+.num-11 {
+    top: 23px;
+    left: 27%;
+    transform: translateX(-50%);
+}
+.arrows {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.arrows::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 4;
+}
+.arrows div {
+    width: 5px;
+    position: absolute;
+    height: 120px;
+    background-color: black;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+.arrows .hour {
+    height: 75px;
+    transform: rotate(30deg);
+}
+.arrows .second {
+    height: 135px;
+    background-color: goldenrod;
+    transform: rotate(250deg);
+    border-radius: 50% 50% 0 0;
+    width: 2px;
+}
+.container-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    background-color: #000;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+}
+.clock-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    background-color: #ccc;
+    border-radius: 16px;
+}
+.clock-2 div {
+    font-size: 5rem;
+    text-align: center;
+    line-height: 160px;
+}
+@media screen and (max-width: 1200px) {
+    .container-clock {
+        position: static;
+        margin-top: 3rem;
+        width: 350px;
+    }
+    .clock-2 div {
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 160px;
+    }
+    body {
+        flex-direction: column;
+    }
+}
+
