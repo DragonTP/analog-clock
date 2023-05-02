@@ -11,30 +11,9 @@ function updateTime() {
     hours[0].style.transform = `rotate(${getHours * 360 / 12}deg)`
     minutes[0].style.transform = `rotate(${getMinutes * 360 / 60}deg)`
     seconds[0].style.transform = `rotate(${getSeconds * 360 / 60}deg)`
-    function checkTime() {
-        function checkTimeHour() {
-            if (getHours < 10) {
-                getHours = "0" + getHours
-            } return getHours
-        }
-        function checkTimeMinute() {
-            if (getMinutes < 10) {
-                getMinutes = "0" + getMinutes
-            } return getMinutes
-        }
-        function checkTimeSecond() {
-            if (getSeconds < 10) {
-                getSeconds = "0" + getSeconds
-            } return getSeconds
-        }
-        checkTimeHour();
-        checkTimeMinute();
-        checkTimeSecond()
-    }
-    checkTime()
 
-    hours[1].innerText = `${getHours}:`
-    minutes[1].innerText = `${getMinutes}:`
-    seconds[1].innerText = getSeconds
+    hours[1].innerText = `${String(getHours).padStart(2, 0)}:`
+    minutes[1].innerText = `${String(getMinutes).padStart(2, 0)}:`
+    seconds[1].innerText = `${getSeconds}`.padStart(2, 0)
 }
 setInterval(updateTime, 500)
